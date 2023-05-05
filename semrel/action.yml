@@ -15,7 +15,7 @@ runs:
       shell: bash
     - name: Create .releaserc
       run: |
-        cat <<EOF > .releaserc
+        cat <<EOF >> .releaserc
         {
           "branches": [
             "$default-branch"
