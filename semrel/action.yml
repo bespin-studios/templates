@@ -41,7 +41,7 @@ runs:
       shell: bash
     - name: config
       shell: bash
-      run: echo .releaserc
+      run: cat .releaserc
     - name: Release
       run: semantic-release
       shell: bash
