@@ -12,6 +12,7 @@ runs:
         node-version: 18.x
     - name: Install semantic-release extra plugins
       run: npm install -g conventional-changelog-conventionalcommits @semantic-release/git @semantic-release/changelog semantic-release@21
+      shell: bash
     - name: Create .releaserc
       run: |
         cat <<EOF > .releaserc
@@ -37,5 +38,7 @@ runs:
           ]
         }
         EOF
+      shell: bash
     - name: Release
       run: semantic-release
+      shell: bash
