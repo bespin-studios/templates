@@ -24,7 +24,7 @@ runs:
         cat <<EOF >> .releaserc
         {
           "branches": [
-            "${{ inputs.who-to-greet }}"
+            "${{ inputs.default-branch }}"
           ],
           "plugins": [
             [
@@ -45,9 +45,6 @@ runs:
         }
         EOF
       shell: bash
-    - name: config
-      shell: bash
-      run: cat .releaserc
     - name: Release
       run: semantic-release
       shell: bash
