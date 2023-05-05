@@ -1,6 +1,12 @@
 name: 'Versioning Job'
 description: 'Create a new version based on the commit messages'
 
+inputs:
+  default-branch:
+    description: 'Default branch'
+    required: true
+    default: 'main'
+
 runs:
   using: "composite"
   steps:
@@ -18,7 +24,7 @@ runs:
         cat <<EOF >> .releaserc
         {
           "branches": [
-            "$default-branch"
+            "${{ inputs.who-to-greet }}"
           ],
           "plugins": [
             [
@@ -39,9 +45,6 @@ runs:
         }
         EOF
       shell: bash
-    - name: config
-      shell: bash
-      run: cat .releaserc
     - name: Release
       run: semantic-release
       shell: bash
