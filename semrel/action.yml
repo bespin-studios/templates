@@ -36,6 +36,7 @@ runs:
                 "preset": "conventionalcommits"
               }
             ],
+            "@semantic-release/changelog",
             [
               "@semantic-release/github", {
                 "assets": [
