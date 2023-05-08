@@ -32,14 +32,6 @@ runs:
               {
                 "preset": "conventionalcommits"
               }
-            ],
-            "@semantic-release/changelog",
-            "@semantic-release/release-notes-generator",
-            [
-              "@semantic-release/git",
-              {
-                "assets": ["CHANGELOG.md"]
-              }
             ]
           ]
         }
