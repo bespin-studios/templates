@@ -6,6 +6,9 @@ inputs:
     description: 'Default branch'
     required: true
     default: 'main'
+  gh_token:
+    description: 'Github PAT'
+    required: true
 
 runs:
   using: "composite"
@@ -48,4 +51,4 @@ runs:
       run: semantic-release
       shell: bash
       env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GH_TOKEN: ${{ inputs.gh_token }}
