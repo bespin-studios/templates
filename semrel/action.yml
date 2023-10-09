@@ -20,7 +20,7 @@ runs:
       with:
         node-version: 18.x
     - name: Install semantic-release extra plugins
-      run: npm install -g conventional-changelog-conventionalcommits @semantic-release/git @semantic-release/changelog semantic-release@21
+      run: npm install -g conventional-changelog-conventionalcommits @semantic-release/git @semantic-release/changelog semantic-release@22
       shell: bash
     - name: Create .releaserc
       run: |
