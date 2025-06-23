@@ -18,7 +18,7 @@ runs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 18.x
+        node-version: 24.x
     - name: Install semantic-release extra plugins
       run: npm install -g conventional-changelog-conventionalcommits @semantic-release/git @semantic-release/changelog semantic-release@22
       shell: bash
